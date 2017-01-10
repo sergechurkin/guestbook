@@ -18,10 +18,5 @@
             "name": "sergechurkin",
             "email": "sergechurkin@yandex.ru"
         }
-    ],
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
-    }
+    ]
 }
