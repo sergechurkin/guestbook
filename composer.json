@@ -6,7 +6,7 @@
     "license": "BSD-3-Clause",
     "require": {
         "php": ">=5.4.0",
-        "sergechurkin/cform": "1.*",
+        "sergechurkin/cform": "1.*"
     },
     "support": {
         "issues": "https://github.com/sergechurkin/guestbook/issues",
