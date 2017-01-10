@@ -5,7 +5,7 @@
     "type": "example",
     "license": "BSD-3-Clause",
     "minimum-stability": "dev",
-    "require": {
+    "require-dev": {
         "php": ">=5.4.0",
         "sergechurkin/cform": "1.0.x-dev"
     },
