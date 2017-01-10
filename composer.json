@@ -4,10 +4,10 @@
     "keywords": ["form", "table", "captcha", "Guestbook", "test job"],
     "type": "example",
     "license": "BSD-3-Clause",
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "sergechurkin/cform": "*"
+        "sergechurkin/cform": "1.0.x-dev"
     },
     "support": {
         "issues": "https://github.com/sergechurkin/guestbook/issues",
@@ -18,5 +18,10 @@
             "name": "sergechurkin",
             "email": "sergechurkin@yandex.ru"
         }
-    ]
+    ],
+    "extra": {
+        "branch-alias": {
+            "master": "1.0.x-dev"
+        }
+    }
 }
