@@ -1,0 +1,21 @@
+{
+    "name": "sergechurkin/guestbook",
+    "description": "Test example for package sergechurkin/cform",
+    "keywords": ["form", "table", "captcha", "Guestbook", "test job"],
+    "type": "example",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.4.0",
+        "sergechurkin/cform": "1.*",
+    },
+    "support": {
+        "issues": "https://github.com/sergechurkin/guestbook/issues",
+        "source": "https://github.com/sergechurkin/guestbook"
+    },
+    "authors": [
+        {
+            "name": "sergechurkin",
+            "email": "sergechurkin@yandex.ru"
+        }
+    ]
+}
