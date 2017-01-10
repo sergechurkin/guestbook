@@ -7,7 +7,7 @@
     "minimum-stability": "dev",
     "require-dev": {
         "php": ">=5.4.0",
-        "sergechurkin/cform": "*"
+        "sergechurkin/cform": "1.0.x-dev"
     },
     "support": {
         "issues": "https://github.com/sergechurkin/guestbook/issues",
@@ -18,5 +18,10 @@
             "name": "sergechurkin",
             "email": "sergechurkin@yandex.ru"
         }
-    ]
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
 }
