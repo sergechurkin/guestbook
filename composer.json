@@ -1,13 +1,14 @@
 {
     "name": "sergechurkin/guestbook",
     "description": "Test example for package sergechurkin/cform",
-    "keywords": ["form", "table", "captcha", "Guestbook", "test job"],
-    "type": "example",
+    "keywords": ["form", "table", "captcha", "Guestbook", "git tag 1.1-dev"],
+    "type": "project",
     "license": "BSD-3-Clause",
     "minimum-stability": "stable",
-    "require": {
+    "prefer-stable": true,
+    "require-dev": {
         "php": ">=5.4.0",
-        "sergechurkin/cform": "1.0.x-dev"
+        "sergechurkin/cform": "1.1.x-dev"
     },
     "support": {
         "issues": "https://github.com/sergechurkin/guestbook/issues",
@@ -21,7 +22,7 @@
     ],
     "extra": {
         "branch-alias": {
-            "master": "1.0.x-dev"
+            "dev-master": "1.1.x-dev"
         }
     }
 }
