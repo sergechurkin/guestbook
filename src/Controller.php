@@ -10,40 +10,36 @@ class Controller {
 */
     public function run() {
         $model = new Model();
-        $model->url    = (string)filter_input(INPUT_SERVER , 'REQUEST_URI');
         $model->page   = (string)filter_input(INPUT_GET, 'page');
+        if (empty($model->page)) {
+            $model->page = 'gb';
+        }
         $model->action = (string)filter_input(INPUT_GET, 'action');
-        $model->user   = (string)filter_input(INPUT_COOKIE, 'user'); //
+        if (empty($model->action)) {
+            $model->action = 'brw';
+        }
         if (!empty((string)filter_input(INPUT_POST, 'action'))) {
             $model->action = (string)filter_input(INPUT_POST, 'action');
         }
-        $model->error = false;
         $model->setProp();
-        if ($model->page == 'logout') {
-            setcookie("user", ''); 
-            $model->user = '';
-            $model->page == 'home';
-        }
-        $cform = $model->createForm();
-        if ($model->page == 'formcreate') {
-            if ($model->action == 'view') {
-                $model->createView($cform);
-            }
-            elseif ($model->action == 'create' || $model->action == 'validate') {
-                $model->actionCreate($cform);
-            }
-            if ($model->action == 'delete') {
-                $model->actionDelete($cform);
-            }
-        }
-        elseif ($model->page == 'formlogin') {
-            $model->createFormLogin($cform);
-        } else {
-            $model->createDefaultMenu($cform);
-        }
-        if (empty($model->action) && !$model->error) {
-            $model->createBrw($cform);
+        $model->createForm();
+        /* Возможен вызов следующих методов:
+         * gb_brw
+         * gb_view
+         * gb_create
+         * gb_validate
+         * gb_create
+         * gb_update
+         * gb_logout
+         * login_create
+         * login_validate
+         */
+        $method = $model->page . '_' . $model->action;
+        try {
+            $model->$method ();
+        }   catch (Exception $e) {
+            throw new \RuntimeException($e->getMessage() . "\n" . $e->getTraceAsString());
         }                               
+        $model->closeForm();
     }                               
 }
-
