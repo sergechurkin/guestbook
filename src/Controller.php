@@ -35,10 +35,10 @@ class Controller {
          * login_validate
          */
         $method = $model->page . '_' . $model->action;
-        try {
+        if(method_exists($model, $method)) {
             $model->$method ();
-        }   catch (Exception $e) {
-            throw new \RuntimeException($e->getMessage() . "\n" . $e->getTraceAsString());
+        }   else {
+            throw new \RuntimeException('Вызван не существуующий метод ' . $method . ' в классе Mode');
         }                               
         $model->closeForm();
     }                               
