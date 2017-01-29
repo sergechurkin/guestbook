@@ -38,7 +38,7 @@ class Controller {
         if(method_exists($model, $method)) {
             $model->$method ();
         }   else {
-            throw new \RuntimeException('Вызван не существуующий метод ' . $method . ' в классе Mode');
+            throw new \RuntimeException('Вызван не существуующий метод ' . $method . ' в классе Model');
         }                               
         $model->closeForm();
     }                               
