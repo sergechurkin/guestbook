@@ -129,11 +129,11 @@ class Model {
     public function gb_brw() {
         $this->bldMenu(0);
         $this->fields = [];
-        $this->fields[] = ['#', 'id',];
-        $this->fields[] = ['Имя', 'name',];
-        $this->fields[] = ['Эл.почта', 'email',];
-        $this->fields[] = ['Тема', 'subject',];
-        $this->fields[] = ['Текст', 'body',];
+        $this->fields[] = '#';
+        $this->fields[] = 'Имя';
+        $this->fields[] = 'Эл.почта';
+        $this->fields[] = 'Тема';
+        $this->fields[] = 'Текст';
         $this->connect();
         $sql = 'SELECT COUNT(*) as count FROM `tst_gbook`';
         $result = $this->pdo->prepare($sql);
