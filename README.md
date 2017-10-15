@@ -1,6 +1,6 @@
 # guestbook
 
-В тестовом приложении "Гостевая книга" использована библиотека
+В тестовом приложении "Гостевая книга", написанном на PHP по схеме MVC, использована библиотека
 [sergechurkin/cform](https://github.com/sergechurkin/cform),
 которая подключена как расширение. При установке с помощью
 [composer](http://getcomposer.org/download/)
