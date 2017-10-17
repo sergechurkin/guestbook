@@ -171,7 +171,7 @@ class Model {
         $sql = 'SELECT * FROM `tst_gbook` WHERE id=' . $this->id;
         $result = $this->pdo->prepare($sql);
         $result->execute();
-        $row = $result->fetch($this->pdo::FETCH_ASSOC);
+        $row = $result->fetch(PDO::FETCH_ASSOC);
         $this->gb_fields($isview);
         $this->fields[0][5] = $row['name'];
         $this->fields[1][5] = $row['email'];
